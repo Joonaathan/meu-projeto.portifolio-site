@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Portifolio</title>
+</head>
+
+<body>
+
+    <div class="particulas"> test</div>
+
+
+    <nav class="navegacao">
+
+        <ul class="menu">
+            <li>
+                <a href="#Inicio" class="menu-link">Inicio</a>
+            </li>
+            <li>
+                <a href="#Sobre" class="menu-link">Sobre</a>
+            </li>
+            <li>
+                <a href="#Projetos" class="menu-link">Projetos</a>
+            </li>
+            <li>
+                <a href="#Contatos" class="menu-link">Contatos</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main id="Inicio" class="cabecalho">
+
+        <img src="./IMG/jo.jpg" alt="foto de jonathan" class="foto-perfil">
+        <h1>Jonathan Almeida da Silva</h1>
+        <p class="cabecario-sub-titulo">Desenvolvedor front-end</p>
+
+    </main>
+
+    <section id="Sobre" class="sobre">
+        <h2 class="sobre-titulo">Sobre mim</h2>
+        <div class="sobre-caixa">
+            <p class="sobre-paragrafo">
+                "Olá! Sou um desenvolvedor Front-end apaixonado por criar experiências web únicas e memoráveis. Combino código limpo com design moderno para desenvolver sites que não apenas funcionam perfeitamente, mas também impressionam visualmente."
+            </p>
+        </div>
+
+    </section>
+
+    <section id="Projetos" class="Projetos">
+        <h2 class="projetos-titulo">Meus projetos</h2>
+        <div class="projetos-caixa">
+
+            <div class="projetos-card">
+                <img src="./IMG/horadia.jpeg" alt="projetos" class="projetos-imagem">
+                <div class="caixa-texto-projeto">
+                    <h3 class="info-projetos">Hora do dia</h3>
+                    <p class="paragrafo-projetos">Mostrando imagens de acordo com o horário do dia </p>
+                </div>
+            </div>
+
+            <div class="projetos-card">
+                <img src="./IMG/Login.jpeg" alt="projetos" class="projetos-imagem">
+                <div class="caixa-texto-projeto">
+                    <h3 class="info-projetos">Login</h3>
+                    <p class="paragrafo-projetos">Pagina de login </p>
+                </div>
+            </div>
+
+            <div class="projetos-card">
+                <img src="./IMG/Cortela.jpeg" alt="projetos" class="projetos-imagem">
+                <div class="caixa-texto-projeto">
+                    <h3 class="info-projetos">Cor de tela</h3>
+                    <p class="paragrafo-projetos">Mudando cor da tela atravez de um botão utilizando javascript </p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="Contatos" class="contatos">
+        <H2 class="contatos-titulo">Entre em contato</H2>
+        <form class="formulario-contato" id="Formulario" onsubmit="enviarwhats(event)">
+            <div class="grupo-form">
+                <input placeholder="nome" class="campo-form" id="nome">
+            </div>
+            <div class="grupo-form">
+                <textarea class="campo-form" placeholder="Digite sua mensagem" rows="4" id="mensagem"></textarea>
+
+                <button type="submit" class="botao-form">Whatsapp</button>
+            </div>
+        </form>
+    </section>
+    <script>
+
+
+
+function enviarwhats(event) {
+    event.preventDefault();
+
+    const nome = document.getElementById('nome').value;
+    const mensagem = document.getElementById('mensagem').value;
+    const telefone = '5511961591274';
+
+    const texto = `Olá, me chamo(a) ${nome}, ${mensagem}`;
+    const msgFormatada = encodeURIComponent(texto);
+
+    const url = `https://wa.me/${telefone}?text=${msgFormatada}`;
+
+    window.open(url, '_blank');
+
+    console.log(url);
+}
+
+    </script>
+
+</body>
+
+</html>
