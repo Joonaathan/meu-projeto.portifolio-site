@@ -11,9 +11,6 @@
 
 <body>
 
-testando 1
-
-
     <nav class="navegacao">
 
         <ul class="menu">
@@ -44,7 +41,9 @@ testando 1
         <h2 class="sobre-titulo">Sobre mim</h2>
         <div class="sobre-caixa">
             <p class="sobre-paragrafo">
-                "Olá! Sou um desenvolvedor Front-end apaixonado por criar experiências web únicas e memoráveis. Combino código limpo com design moderno para desenvolver sites que não apenas funcionam perfeitamente, mas também impressionam visualmente."
+                "Olá! Sou um desenvolvedor Front-end apaixonado por criar experiências web únicas e memoráveis. Combino
+                código limpo com design moderno para desenvolver sites que não apenas funcionam perfeitamente, mas
+                também impressionam visualmente."
             </p>
         </div>
 
@@ -99,22 +98,22 @@ testando 1
 
 
 
-function enviarwhats(event) {
-    event.preventDefault();
+        function enviarwhats(event) {
+            event.preventDefault();
 
-    const nome = document.getElementById('nome').value;
-    const mensagem = document.getElementById('mensagem').value;
-    const telefone = '5511961591274';
+            const nome = document.getElementById('nome').value;
+            const mensagem = document.getElementById('mensagem').value;
+            const telefone = '5511961591274';
 
-    const texto = `Olá, me chamo(a) ${nome}, ${mensagem}`;
-    const msgFormatada = encodeURIComponent(texto);
+            const texto = `Olá, me chamo(a) ${nome}, ${mensagem}`;
+            const msgFormatada = encodeURIComponent(texto);
 
-    const url = `https://wa.me/${telefone}?text=${msgFormatada}`;
+            const url = `https://wa.me/${telefone}?text=${msgFormatada}`;
 
-    window.open(url, '_blank');
+            window.open(url, '_blank');
 
-    console.log(url);
-}
+            console.log(url);
+        }
 
     </script>
 
