@@ -62,31 +62,33 @@
         <h2 class="projetos-titulo">Meus projetos</h2>
         <div class="projetos-caixa">
 
-            <div class="projetos-card">
+            <a href="https://link-hora-do-dia.com" target="_blank" class="projetos-card">
                 <img src="./IMG/horadia.jpeg" alt="projetos" class="projetos-imagem">
                 <div class="caixa-texto-projeto">
                     <h3 class="info-projetos">Hora do dia</h3>
-                    <p class="paragrafo-projetos">Mostrando imagens de acordo com o horário do dia </p>
+                    <p class="paragrafo-projetos">Mostrando imagens de acordo com o horário do dia</p>
                 </div>
-            </div>
+            </a>
 
-            <div class="projetos-card">
+            <a href="https://pagina-log.netlify.app/" target="_blank" class="projetos-card">
                 <img src="./IMG/Login.jpeg" alt="projetos" class="projetos-imagem">
                 <div class="caixa-texto-projeto">
                     <h3 class="info-projetos">Login</h3>
-                    <p class="paragrafo-projetos">Pagina de login </p>
+                    <p class="paragrafo-projetos">Página de login</p>
                 </div>
-            </div>
+            </a>
 
-            <div class="projetos-card">
+
+            <a href="https://botao-troca-de-cor.netlify.app/" target="_blank" class="projetos-card">
                 <img src="./IMG/Cortela.jpeg" alt="projetos" class="projetos-imagem">
                 <div class="caixa-texto-projeto">
                     <h3 class="info-projetos">Cor de tela</h3>
-                    <p class="paragrafo-projetos">Mudando cor da tela atravez de um botão utilizando javascript </p>
+                    <p class="paragrafo-projetos">Mudando cor da tela através de um botão utilizando JavaScript</p>
                 </div>
-            </div>
+            </a>
 
         </div>
+
 
     </section>
 
@@ -125,6 +127,45 @@
         }
 
     </script>
+    <footer class="footer">
+  <p>© 2025 Jonathan Almeida da Silva.</p>
+  <div class="footer-links">
+    <a href="https://github.com/Joonaathan" target="_blank" title="GitHub">
+      <img src="/IMG/jo.jpg" alt="GitHub" class="footer-icon">
+    </a>
+    <a href="https://www.linkedin.com/in/jonathan-almeida-da-silva-027152226/" target="_blank" title="LinkedIn">
+      <img src="/IMG/linkedin.png" alt="LinkedIn" class="footer-icon">
+    </a>
+    <a href="https://instagram.com/seu-usuario" target="_blank" title="Instagram">
+      <img src="/IMG/insta.webp" alt="Instagram" class="footer-icon">
+    </a>
+  </div>
+</footer>
+
+
+    <!-- Botão Voltar ao Topo -->
+    <button id="btnTopo" title="Voltar ao topo">↑</button>
+
+    <!-- Font Awesome para ícones -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <script>
+        // Mostrar o botão quando rolar a página
+        window.onscroll = function () {
+            const btn = document.getElementById("btnTopo");
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                btn.style.display = "block";
+            } else {
+                btn.style.display = "none";
+            }
+        };
+
+        // Voltar ao topo suavemente
+        document.getElementById("btnTopo").onclick = function () {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
+    </script>
+
 
 </body>
 
